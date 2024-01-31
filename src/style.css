@@ -41,3 +41,23 @@ form {
   border-radius: 10px;
   display: inline-block;
 }
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  font-size: 100px;
+}
+
+.temperature {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #fdfdfd98;
+}
