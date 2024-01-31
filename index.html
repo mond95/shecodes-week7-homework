@@ -13,28 +13,41 @@
     <title>Weather App</title>
   </head>
   <body>
+    <form>
+      <input
+        type="search"
+        class="search-form-input"
+        id=""
+        placeholder="Enter a city"
+      />
+      <input type="submit" value="search" class="search-form-button" />
+    </form>
     <div class="weather-app">
       <header>
-        <h1>Good morning</h1>
+        <!-- <form>
+          <input
+            type="search"
+            class="search-form-input"
+            id=""
+            placeholder="Enter a city"
+          />
+          <input type="submit" value="search" class="search-form-button" />
+        </form> -->
       </header>
       <main>
-        <form>
-          <input type="search" id="" placeholder="Enter a city" />
-          <input type="submit" value="search" />
-        </form>
+        <h1>London</h1>
+        <div class="container">
+          <div>
+            <p>☁️</p>
+            <p>14°c</p>
+          </div>
+          <div>
+            <p>Tuesday, 2:14pm</p>
+            <p>broken clouds</p>
+            <p>Humidity: 86%, Wind: 3.09km/h</p>
+          </div>
+        </div>
       </main>
-      <h2>London</h2>
-      <div class="container">
-        <div>
-          <p>☁️</p>
-          <p>14°c</p>
-        </div>
-        <div>
-          <p>Tuesday, 2:14pm</p>
-          <p>broken clouds</p>
-          <p>Humidity: 86%, Wind: 3.09km/h</p>
-        </div>
-      </div>
       <footer>
         This project was hosted by <a href="">Monica Diep</a>, is open-sourced
         on <a href="">Github</a> and <a href="">hosted on Netlify</a>

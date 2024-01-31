@@ -8,8 +8,36 @@ body {
   background: #16181d;
   border: 2px solid #151623;
   max-width: 700px;
-  margin: 50px auto;
+  margin: 20px auto;
   padding: 30px;
   box-shadow: 10px 10px 11px rgba(110, 93, 137, 0.1);
   border-radius: 15px;
+}
+
+header {
+  text-align: center;
+}
+
+/* in order to center both the search input AND the button together, I had to set both of them individually to 'inline-block
+which will make them block elements so you can add padding, etc, but make them inline so they will appear beside each other and
+they I had to make the div that surrounded this or the form element in this case be set to text-align: center as per https://stackoverflow.com/questions/46696089/how-do-i-align-my-search-input-and-submit-button-to-the-center-of-the-page */
+form {
+  text-align: center;
+}
+.search-form-input {
+  width: 30%;
+  border-radius: 10px;
+  padding: 7px 15px;
+  font-size: 15px;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #26143f;
+  border: none;
+  display: inline-block;
+}
+
+.search-form-button {
+  padding: 7px 15px;
+  border-radius: 10px;
+  display: inline-block;
 }
