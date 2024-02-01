@@ -14,35 +14,43 @@
     <title>Weather App</title>
   </head>
   <body>
-    <form id="search-form">
-      <input
-        type="search"
-        class="search-form-input"
-        id="search-form-input"
-        placeholder="Enter a city"
-      />
-      <input type="submit" value="search" class="search-form-button" />
-    </form>
+    <header>
+      <form id="search-form">
+        <input
+          type="search"
+          class="search-form-input"
+          id="search-form-input"
+          placeholder="Enter a city"
+        />
+        <input type="submit" value="search" class="search-form-button" />
+      </form>
+    </header>
     <div class="weather-app">
-      <header></header>
       <main>
         <div class="weather-app-data">
           <div class="flex-container">
             <div class="left-container">
               <h1 class="city" id="city"></h1>
               <p class="weather-app-details">
-                <span class="temperature" id="temperature"></span>
+                <!-- <span class="temperature" id="temperature"></span> -->
                 <br />
                 <span class="date" id="date"
                   >Tuesday, <strong>2:14pm</strong></span
                 >
                 <br />
+                <span
+                  class="weather-description"
+                  id="weather-description"
+                ></span>
+                <br />
                 <span class="wind">Wind speed: <strong>3.09km/h</strong></span>
               </p>
             </div>
             <div class="right-container">
+              <!-- <div class="icon-temp-container"> -->
               <div id="icon"></div>
-              <div class="weather-description" id="weather-description"></div>
+              <!-- <div class="weather-description" id="weather-description"></div> -->
+              <div class="temperature" id="temperature"></div>
             </div>
           </div>
         </div>
