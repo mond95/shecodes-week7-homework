@@ -10,14 +10,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
-    <form>
+    <form id="search-form">
       <input
         type="search"
         class="search-form-input"
-        id=""
+        id="search-form-input"
         placeholder="Enter a city"
       />
       <input type="submit" value="search" class="search-form-button" />
@@ -28,9 +29,9 @@
         <div class="weather-app-data">
           <div class="flex-container">
             <div class="left-container">
-              <h1 class="city">London</h1>
+              <h1 class="city" id="city"></h1>
               <p class="weather-app-details">
-                <span class="temperature">14°c</span>
+                <span class="temperature" id="temperature"></span>
                 <br />
                 <span class="time">Tuesday, <strong>2:14pm</strong></span>
                 <br />
@@ -38,8 +39,8 @@
               </p>
             </div>
             <div class="right-container">
-              <span class="icon">☁️</span>
-              <p>broken clouds</p>
+              <div id="icon"></div>
+              <div class="weather-description" id="weather-description"></div>
             </div>
           </div>
         </div>
