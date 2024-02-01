@@ -54,7 +54,9 @@ form {
 .icon {
   width: 200px;
   height: 200px;
-  box-sizing: border-box;
+  margin-top: 40px;
+  position: relative;
+  left: 5px;
 }
 
 .temperature {
@@ -63,9 +65,19 @@ form {
   color: rgb(69, 16, 156);
 }
 
+/* had to make this outer div i.e. the right-container position 'relative' and the inner div I wanted i.e. weather-description
+have a position of absolute. This allowed me to be able to put the description text a bit over the image because when I wanted to make the icon bigger, it
+would push the weather description down due to the bigger margins so this allowed me to make the text appear closer to the icon by going over its margins i.e. on top of the image! */
+.right-container {
+  position: relative;
+}
+
 .weather-description {
   text-align: center;
   margin-top: 0;
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
 }
 
 footer {

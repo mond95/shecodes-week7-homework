@@ -21,6 +21,37 @@ function populateScreen(response) {
     "#weather-description"
   );
   weatherDescriptionElement.innerHTML = response.data.condition.description;
+
+  // populating the date
+  let dateElement = document.querySelector("#date");
+  let date = new Date(response.data.time * 1000);
+  // checking the date time has been parsed correctly
+  console.log(date);
+  dateElement.innerHTML = formatDate(date);
+}
+
+// FIFTH STEP:
+// FUNCTION TO FORMAT THE DATE:
+function formatDate(date) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = date.getDay();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${days[day]}, <strong>${hours}:${minutes}</strong>`;
 }
 
 // THIRD STEP:
