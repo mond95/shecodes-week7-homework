@@ -54,6 +54,25 @@ function formatDate(date) {
   return `${days[day]}, <strong>${hours}:${minutes}</strong>`;
 }
 
+// FUNCTION TO CHANGE THE THEME
+// CHANGE THEME BUTTON:
+let themeButton = document.querySelector("#change-theme-button");
+themeButton.addEventListener("click", changeTheme);
+
+function changeTheme() {
+  let body = document.querySelector("body");
+
+  // Toggle the 'light' class on the body
+  body.classList.toggle("light");
+
+  // Change the inner html of the button based on the class on the body
+  if (body.classList.contains("light")) {
+    themeButton.innerHTML = "Light Theme";
+  } else {
+    themeButton.innerHTML = "Dark Theme";
+  }
+}
+
 // THIRD STEP:
 // get the API data which uses the user's inputted city as the query and then call the populateScreen function
 function getCityData(city) {

@@ -18,12 +18,29 @@ header {
   text-align: center;
 }
 
+.change-theme-button {
+  margin-right: 1000px;
+  margin-top: 10px;
+  background-color: #2e2638;
+  color: #fdfdfd;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 10px 10px 11px rgba(110, 93, 137, 0.1);
+  transition: all 150ms ease-in-out;
+}
+
+button:hover {
+  border: 1px solid #fdfdfd;
+}
+
 /* in order to center both the search input AND the button together, I had to set both of them individually to 'inline-block
 which will make them block elements so you can add padding, etc, but make them inline so they will appear beside each other and
 they I had to make the div that surrounded this or the form element in this case be set to text-align: center as per https://stackoverflow.com/questions/46696089/how-do-i-align-my-search-input-and-submit-button-to-the-center-of-the-page */
 form {
   text-align: center;
 }
+
 .search-form-input {
   width: 30%;
   border-radius: 10px;
@@ -56,13 +73,6 @@ form {
   justify-content: space-between;
 }
 
-/* had to make this outer div i.e. the right-container position 'relative' and the inner div I wanted i.e. weather-description
-have a position of absolute. This allowed me to be able to put the description text a bit over the image because when I wanted to make the icon bigger, it
-would push the weather description down due to the bigger margins so this allowed me to make the text appear closer to the icon by going over its margins i.e. on top of the image! */
-/* .right-container {
-  position: relative;
-} */
-
 .right-container {
   display: flex;
   justify-content: space-between;
@@ -91,4 +101,43 @@ footer {
   margin-top: 30px;
   font-size: 13px;
   color: #fdfdfd98;
+}
+
+/* CHANGE THEME BUTTON - LIGHT MODE */
+.light {
+  background: #d6e2f5;
+  color: #0c0e15;
+}
+
+.light .weather-app {
+  background: #fcfdff;
+  border: none;
+  box-shadow: 10px 10px 11px rgba(51, 92, 144, 0.1);
+  color: #0c0e15;
+}
+
+.light .search-form-input {
+  background: #4a80c1cb;
+  color: white;
+}
+
+/* the placeholder text colour wasn't changing because it is grey by default so needed to do this to be able to change the colour */
+.light .search-form-input::placeholder {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.light .temperature {
+  color: #2f77bf;
+}
+
+.light footer {
+  color: #5d7096;
+}
+
+.light a {
+  color: #386194;
+}
+
+.light .change-theme-button {
+  background: rgba(109, 153, 255, 0.6);
 }
