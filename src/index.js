@@ -22,6 +22,12 @@ function populateScreen(response) {
   );
   weatherDescriptionElement.innerHTML = response.data.condition.description;
 
+  // populating the wind speed
+  let windElement = document.querySelector("#wind");
+  console.log(response.data.wind.speed);
+
+  windElement.innerHTML = `Wind speed: <strong>${response.data.wind.speed}km/h</strong>`;
+
   // populating the date
   let dateElement = document.querySelector("#date");
   let date = new Date(response.data.time * 1000);
