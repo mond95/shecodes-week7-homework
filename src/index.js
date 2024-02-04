@@ -73,9 +73,9 @@ function changeTheme() {
 
   // Change the inner html of the button based on the class on the body
   if (body.classList.contains("light")) {
-    themeButton.innerHTML = "Light Theme";
-  } else {
     themeButton.innerHTML = "Dark Theme";
+  } else {
+    themeButton.innerHTML = "Light Theme";
   }
 }
 
